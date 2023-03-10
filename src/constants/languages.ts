@@ -10,12 +10,18 @@ interface Language {
 export const languages: Language[] = [
   {
     id: 1,
+    name: 'pt-BR',
+    title: 'Português Brasil',
+    countryCode: 'br',
+  },
+  {
+    id: 2,
     name: 'en',
     title: 'English',
     countryCode: 'gb',
   },
   {
-    id: 2,
+    id: 3,
     name: 'de',
     title: 'German',
     countryCode: 'de',
