@@ -38,7 +38,7 @@ export const ControlForm: React.FC = () => {
     setTimeout(() => {
       setFieldsChanged(false);
       setLoading(false);
-      notificationController.success({ message: t('common.success') });
+      notificationController.success({ message: t('common.success') || '' });
       console.log(values);
     }, 1000);
   };
@@ -74,7 +74,7 @@ export const ControlForm: React.FC = () => {
         <BaseButtonsForm.Item
           name="group"
           label={t('forms.controlFormLabels.groupName')}
-          rules={[{ required: true, message: t('forms.controlFormLabels.groupNameError') }]}
+          rules={[{ required: true, message: t('forms.controlFormLabels.groupNameError') || '' }]}
         >
           <Input />
         </BaseButtonsForm.Item>

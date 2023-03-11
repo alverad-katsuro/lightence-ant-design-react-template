@@ -17,16 +17,16 @@ export const PhoneItem: React.FC<PhoneItemsProps> = ({ required, onClick, verifi
     <BaseButtonsForm.Item
       name="phone"
       $isSuccess={verified}
-      $successText={t('profile.nav.personalInfo.verified')}
+      $successText={t('profile.nav.personalInfo.verified')!}
       label={t('common.phone')}
       rules={[
-        { required, message: t('common.requiredField') },
+        { required, message: t('common.requiredField')! },
         () => ({
           validator(_, value) {
             if (!value || isValidPhoneNumber(value)) {
               return Promise.resolve();
             }
-            return Promise.reject(new Error(t('profile.nav.personalInfo.wrongNumber')));
+            return Promise.reject(new Error(t('profile.nav.personalInfo.wrongNumber')!));
           },
         }),
       ]}

@@ -53,28 +53,28 @@ export const NewPasswordForm: React.FC = () => {
         <Auth.FormItem
           name="password"
           label={t('common.password')}
-          rules={[{ required: true, message: t('common.requiredField') }]}
+          rules={[{ required: true, message: t('common.requiredField') || '' }]}
         >
-          <Auth.FormInputPassword placeholder={t('common.password')} />
+          <Auth.FormInputPassword placeholder={t('common.password') || ''} />
         </Auth.FormItem>
         <Auth.FormItem
           name="confirmPassword"
           label={t('common.confirmPassword')}
           dependencies={['password']}
           rules={[
-            { required: true, message: t('common.requiredField') },
+            { required: true, message: t('common.requiredField') || '' },
             ({ getFieldValue }) => ({
               validator(_, value) {
                 if (!value || getFieldValue('password') === value) {
                   return Promise.resolve();
                 }
-                return Promise.reject(new Error(t('common.confirmPasswordError')));
+                return Promise.reject(new Error(t('common.confirmPasswordError') || ''));
               },
             }),
           ]}
           hasFeedback
         >
-          <Auth.FormInputPassword placeholder={t('common.confirmPassword')} />
+          <Auth.FormInputPassword placeholder={t('common.confirmPassword') || ''} />
         </Auth.FormItem>
         <BaseForm.Item noStyle>
           <S.SubmitButton type="primary" htmlType="submit" loading={isLoading}>

@@ -14,7 +14,7 @@ export const CVVItem: React.FC<CardInputProps> = ({ disabled, handleInputFocus }
       rules={[
         {
           required: true,
-          message: t('common.requiredField'),
+          message: t('common.requiredField') || '',
         },
       ]}
     >

@@ -30,14 +30,14 @@ export const AddUserFormModal: React.FC<AddUserFormModalProps> = ({ open, onCanc
         <BaseForm.Item
           name="name"
           label={t('common.name')}
-          rules={[{ required: true, message: t('common.requiredField') }]}
+          rules={[{ required: true, message: t('common.requiredField') || '' }]}
         >
           <Input />
         </BaseForm.Item>
         <BaseForm.Item
           name="age"
           label={t('common.age')}
-          rules={[{ required: true, message: t('common.requiredField') }]}
+          rules={[{ required: true, message: t('common.requiredField') || '' }]}
         >
           <InputNumber $block />
         </BaseForm.Item>

@@ -46,21 +46,21 @@ export const StepForm: React.FC = () => {
   const { t } = useTranslation();
 
   const formLabels: FormValues = {
-    login: t('forms.stepFormLabels.login'),
-    password: t('common.password'),
-    confirmPassword: t('common.confirmPassword'),
-    salutation: t('forms.stepFormLabels.salutation'),
-    gender: t('forms.stepFormLabels.gender'),
-    firstName: t('common.firstName'),
-    lastName: t('common.lastName'),
-    birthday: t('forms.stepFormLabels.birthday'),
-    phone: t('common.phone'),
-    email: t('common.email'),
-    address1: `${t('common.address')} 1`,
-    address2: `${t('common.address')} 2`,
-    zipCode: t('common.zipcode'),
-    city: t('common.city'),
-    country: t('common.country'),
+    login: t('forms.stepFormLabels.login') || '',
+    password: t('common.password') || '',
+    confirmPassword: t('common.confirmPassword') || '',
+    salutation: t('forms.stepFormLabels.salutation') || '',
+    gender: t('forms.stepFormLabels.gender') || '',
+    firstName: t('common.firstName') || '',
+    lastName: t('common.lastName') || '',
+    birthday: t('forms.stepFormLabels.birthday') || '',
+    phone: t('common.phone') || '',
+    email: t('common.email') || '',
+    address1: `${t('common.address') || ''} 1`,
+    address2: `${t('common.address') || ''} 2`,
+    zipCode: t('common.zipcode') || '',
+    city: t('common.city') || '',
+    country: t('common.country') || '',
   };
 
   const formValues = fields

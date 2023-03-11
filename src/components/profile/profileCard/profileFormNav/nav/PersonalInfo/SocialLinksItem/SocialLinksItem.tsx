@@ -42,7 +42,7 @@ export const SocialLinksItem: React.FC = () => {
                     rules={[
                       {
                         pattern: new RegExp(websitePattern),
-                        message: t('profile.nav.personalInfo.notValidWebsite'),
+                        message: t('profile.nav.personalInfo.notValidWebsite') || '',
                       },
                     ]}
                   >
@@ -66,7 +66,7 @@ export const SocialLinksItem: React.FC = () => {
                     rules={[
                       {
                         pattern: new RegExp(websitePattern),
-                        message: t('profile.nav.personalInfo.notValidWebsite'),
+                        message: t('profile.nav.personalInfo.notValidWebsite') || '',
                       },
                     ]}
                   >

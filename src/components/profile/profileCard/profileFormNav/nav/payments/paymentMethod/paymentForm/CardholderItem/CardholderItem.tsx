@@ -10,17 +10,17 @@ export const CardholderItem: React.FC<CardInputProps> = ({ disabled, handleInput
   return (
     <BaseButtonsForm.Item
       name="name"
-      label={t('profile.nav.payments.cardholderName')}
+      label={t('profile.nav.payments.cardholderName') || ''}
       rules={[
         {
           required: true,
-          message: t('common.requiredField'),
+          message: t('common.requiredField') || '',
         },
       ]}
     >
       <Input
         name="name"
-        placeholder={t('profile.nav.payments.yourName')}
+        placeholder={t('profile.nav.payments.yourName') || ''}
         onFocus={handleInputFocus}
         disabled={disabled}
       />

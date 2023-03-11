@@ -14,12 +14,12 @@ export const CardNumberItem: React.FC<CardInputProps> = ({ disabled, handleInput
       rules={[
         {
           required: true,
-          message: t('common.requiredField'),
+          message: t('common.requiredField') || '',
         },
       ]}
     >
       <MaskedInput
-        placeholder={t('profile.nav.payments.yourCardNumber')}
+        placeholder={t('profile.nav.payments.yourCardNumber') || ''}
         name="number"
         mask="0000 0000 0000 0000"
         onFocus={handleInputFocus}

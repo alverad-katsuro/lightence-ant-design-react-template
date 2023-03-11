@@ -118,7 +118,8 @@ const AutoCompletesPage: React.FC = () => {
         <S.Card title={t('autoCompletes.categories')}>
           <label>
             <AutoComplete popupClassName="certain-category-search-dropdown" options={categories}>
-              <SearchInput placeholder={t('autoCompletes.inputHere')} prefix={null} />
+              <SearchInput  prefix={null} />
+              {/* placeholder={t('autoCompletes.inputHere')} */}
             </AutoComplete>
           </label>
         </S.Card>

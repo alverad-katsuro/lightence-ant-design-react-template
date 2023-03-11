@@ -26,7 +26,7 @@ export const NewLaneForm: React.FC<NewLaneFormProps> = ({ onAdd, onCancel }) => 
       onFinish={handleSubmit}
     >
       <S.FormInput name={'title'}>
-        <Input placeholder={t('kanban.title')} bordered={false} />
+        <Input placeholder={t('kanban.title') || ''} bordered={false} />
       </S.FormInput>
     </S.Form>
   );

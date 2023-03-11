@@ -45,14 +45,18 @@ const InputsPage: React.FC = () => {
       <Col>
         <S.Card title={t('inputs.basic')}>
           <S.InputsWrapper>
-            <Input placeholder={t('inputs.basic')} />
+            <Input />
+            {/* placeholder={t('inputs.basic')} */}
           </S.InputsWrapper>
         </S.Card>
         <S.Card title={t('inputs.sizes')}>
           <S.InputsWrapper>
-            <Input size="small" placeholder={t('inputs.small')} prefix={<UserOutlined />} />
-            <Input placeholder={t('inputs.default')} prefix={<UserOutlined />} />
-            <Input size="large" placeholder={t('inputs.large')} prefix={<UserOutlined />} />
+            <Input size="small" prefix={<UserOutlined />} />
+            {/* placeholder={t('inputs.small')} */}
+            <Input prefix={<UserOutlined />} />
+            {/* placeholder={t('inputs.default')} */}
+            <Input size="large" prefix={<UserOutlined />} />
+            {/* placeholder={t('inputs.large')} */}
           </S.InputsWrapper>
         </S.Card>
         <S.Card title={t('inputs.prePost')}>
@@ -67,7 +71,7 @@ const InputsPage: React.FC = () => {
         <S.Card title={t('inputs.prefixSuffix')}>
           <S.InputsWrapper>
             <Input
-              placeholder={t('inputs.enterName')}
+              //placeholder={t('inputs.enterName')}
               prefix={<UserOutlined />}
               suffix={
                 <Tooltip title={t('inputs.extra')}>
@@ -81,10 +85,12 @@ const InputsPage: React.FC = () => {
         </S.Card>
         <S.Card title={t('inputs.search')}>
           <S.InputsWrapper>
-            <SearchInput placeholder={t('inputs.searchText')} allowClear />
-            <SearchInput addonBefore="https://" placeholder={t('inputs.searchText')} allowClear />
+            <SearchInput allowClear />
+            {/* placeholder={t('inputs.searchText')} */}
+            <SearchInput addonBefore="https://" allowClear />
+            {/* placeholder={t('inputs.searchText')} */}
             <SearchInput
-              placeholder={t('inputs.searchText')}
+              //placeholder={t('inputs.searchText')}
               enterButton="Search"
               size="large"
               suffix={<AudioOutlined />}
@@ -94,7 +100,7 @@ const InputsPage: React.FC = () => {
         <S.Card title={t('inputs.password')}>
           <S.InputsWrapper>
             <InputPassword
-              placeholder={t('inputs.passwordText')}
+              //placeholder={t('inputs.passwordText')}
               iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
             />
           </S.InputsWrapper>
@@ -108,13 +114,13 @@ const InputsPage: React.FC = () => {
           <S.InputsWrapper>
             <ClipboardInput
               value={clipboardValue}
-              placeholder={t('inputs.clipboard')}
+              //placeholder={t('inputs.clipboard')}
               valueToCopy={clipboardValue}
               onChange={(e) => setClipboardValue(e.target.value)}
             />
             <OpenURLInput
               value={newTabValue}
-              placeholder={t('inputs.openURL')}
+              //placeholder={t('inputs.openURL')}
               href={newTabValue}
               onChange={(e) => setNewTabValue(e.target.value)}
             />

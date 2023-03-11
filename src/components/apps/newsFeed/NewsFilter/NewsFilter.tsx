@@ -79,7 +79,7 @@ const Filter: React.FC<Filter> = ({
       <S.InputWrapper>
         <S.SearchIcon />
         <S.Input
-          placeholder={t('newsFeed.authorSearch')}
+          //placeholder={t('newsFeed.authorSearch')}
           value={author}
           onChange={(event) => updateFilteredField('author', event.target.value)}
         />
@@ -88,7 +88,7 @@ const Filter: React.FC<Filter> = ({
       <S.InputWrapper>
         <S.SearchIcon />
         <S.Input
-          placeholder={t('newsFeed.titleSearch')}
+          //placeholder={t('newsFeed.titleSearch')}
           value={title}
           onChange={(event) => updateFilteredField('title', event.target.value)}
         />

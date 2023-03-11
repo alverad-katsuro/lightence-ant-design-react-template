@@ -65,7 +65,7 @@ export const ValidationForm: React.FC = () => {
         name="select"
         label={t('forms.validationFormLabels.select')}
         hasFeedback
-        rules={[{ required: true, message: t('forms.validationFormLabels.countryError') }]}
+        rules={[{ required: true, message: t('forms.validationFormLabels.countryError') || '' }]}
       >
         <Select placeholder={t('forms.validationFormLabels.selectCountry')}>
           <Option value="china">{t('forms.validationFormLabels.china')}</Option>
@@ -76,7 +76,7 @@ export const ValidationForm: React.FC = () => {
       <BaseButtonsForm.Item
         name="select-multiple"
         label={t('forms.validationFormLabels.selectMultiple')}
-        rules={[{ required: true, message: t('forms.validationFormLabels.colorError'), type: 'array' }]}
+        rules={[{ required: true, message: t('forms.validationFormLabels.colorError') || '', type: 'array' }]}
       >
         <Select mode="multiple" placeholder={t('forms.validationFormLabels.selectColor')}>
           <Option value="red">{t('forms.validationFormLabels.red')}</Option>
@@ -123,7 +123,7 @@ export const ValidationForm: React.FC = () => {
       <BaseButtonsForm.Item
         name="radio-button"
         label={t('forms.validationFormLabels.radioButton')}
-        rules={[{ required: true, message: t('forms.validationFormLabels.itemError') }]}
+        rules={[{ required: true, message: t('forms.validationFormLabels.itemError') || '' }]}
       >
         <RadioGroup>
           <RadioButton value="a">{t('forms.validationFormLabels.item')} 1</RadioButton>

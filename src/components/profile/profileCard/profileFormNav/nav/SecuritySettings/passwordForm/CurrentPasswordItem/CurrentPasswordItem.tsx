@@ -13,7 +13,7 @@ export const CurrentPasswordItem: React.FC = () => {
       rules={[
         {
           required: true,
-          message: t('profile.nav.securitySettings.requiredPassword'),
+          message: t('profile.nav.securitySettings.requiredPassword') || '',
         },
       ]}
     >

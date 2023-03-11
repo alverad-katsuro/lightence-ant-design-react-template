@@ -47,9 +47,9 @@ export const ForgotPasswordForm: React.FC = () => {
         <Auth.FormItem
           name="email"
           label={t('common.email')}
-          rules={[{ required: true, message: t('common.emailError') }]}
+          rules={[{ required: true, message: t('common.emailError') || '' }]}
         >
-          <Auth.FormInput placeholder={t('common.email')} />
+          <Auth.FormInput placeholder={t('common.email') || ''} />
         </Auth.FormItem>
         <BaseForm.Item noStyle>
           <S.SubmitButton type="primary" htmlType="submit" loading={isLoading}>

@@ -25,7 +25,7 @@ export const WebsiteItem: React.FC<WebsiteItemProps> = () => {
             rules={[
               {
                 pattern: websitePattern,
-                message: t('profile.nav.personalInfo.notValidWebsite'),
+                message: t('profile.nav.personalInfo.notValidWebsite')!,
               },
             ]}
           >

@@ -45,23 +45,23 @@ export const LoginForm: React.FC = () => {
         <S.LoginDescription>{t('login.loginInfo')}</S.LoginDescription>
         <Auth.FormItem
           name="email"
-          label={t('common.email')}
+          label={t('common.email') || ''}
           rules={[
-            { required: true, message: t('common.requiredField') },
+            { required: true, message: t('common.requiredField') || '' },
             {
               type: 'email',
-              message: t('common.notValidEmail'),
+              message: t('common.notValidEmail') || '',
             },
           ]}
         >
-          <Auth.FormInput placeholder={t('common.email')} />
+          <Auth.FormInput placeholder={t('common.email') || ''} />
         </Auth.FormItem>
         <Auth.FormItem
           label={t('common.password')}
           name="password"
-          rules={[{ required: true, message: t('common.requiredField') }]}
+          rules={[{ required: true, message: t('common.requiredField') || '' }]}
         >
-          <Auth.FormInputPassword placeholder={t('common.password')} />
+          <Auth.FormInputPassword placeholder={t('common.password') || ''} />
         </Auth.FormItem>
         <Auth.ActionsWrapper>
           <BaseForm.Item name="rememberMe" valuePropName="checked" noStyle>

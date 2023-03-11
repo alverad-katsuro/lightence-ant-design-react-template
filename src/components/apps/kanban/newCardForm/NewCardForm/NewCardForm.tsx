@@ -42,7 +42,7 @@ export const NewCardForm: React.FC<NewCardFormProps> = ({ onAdd, onCancel }) => 
     () =>
       formInputs.map((item, index) => (
         <S.FormInput key={index} name={item.name}>
-          <Input placeholder={t(item.title)} bordered={false} />
+          <Input placeholder={t(item.title) || ''} bordered={false} />
         </S.FormInput>
       )),
     [t],

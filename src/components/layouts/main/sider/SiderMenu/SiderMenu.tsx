@@ -37,7 +37,7 @@ const SiderMenu: React.FC<SiderContentProps> = ({ setCollapsed }) => {
 
         return {
           key: nav.key,
-          title: t(nav.title),
+          title: t(nav.title) || '',
           label: isSubMenu ? t(nav.title) : <Link to={nav.url || ''}>{t(nav.title)}</Link>,
           icon: nav.icon,
           children:

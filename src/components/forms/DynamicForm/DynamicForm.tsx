@@ -56,7 +56,7 @@ export const DynamicForm: React.FC = () => {
       <BaseButtonsForm.Item
         name="area"
         label={t('forms.dynamicFormLabels.area')}
-        rules={[{ required: true, message: t('forms.dynamicFormLabels.areaError') }]}
+        rules={[{ required: true, message: t('forms.dynamicFormLabels.areaError') || '' }]}
       >
         <Select options={areas} onChange={handleChange} />
       </BaseButtonsForm.Item>
@@ -79,7 +79,7 @@ export const DynamicForm: React.FC = () => {
                         label={t('forms.dynamicFormLabels.sight')}
                         name={[field.name, 'sight']}
                         fieldKey={[field.key, 'sight']}
-                        rules={[{ required: true, message: t('forms.dynamicFormLabels.sightError') }]}
+                        rules={[{ required: true, message: t('forms.dynamicFormLabels.sightError') || '' }]}
                       >
                         <Select disabled={!form.getFieldValue('area')}>
                           {(sights[form.getFieldValue('area')] || []).map((item) => (
@@ -98,7 +98,7 @@ export const DynamicForm: React.FC = () => {
                     label={t('forms.dynamicFormLabels.price')}
                     name={[field.name, 'price']}
                     fieldKey={[field.key, 'price']}
-                    rules={[{ required: true, message: t('forms.dynamicFormLabels.priceError') }]}
+                    rules={[{ required: true, message: t('forms.dynamicFormLabels.priceError') || '' }]}
                   >
                     <S.Wrapper>
                       <Input />

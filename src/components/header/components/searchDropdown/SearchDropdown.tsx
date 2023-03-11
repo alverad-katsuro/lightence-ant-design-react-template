@@ -46,7 +46,7 @@ export const SearchDropdown: React.FC<SearchOverlayProps> = ({
           <InputSearch
             width="100%"
             value={query}
-            placeholder={t('header.search')}
+            placeholder={t('header.search') || ''}
             filter={
               <Btn
                 size="small"

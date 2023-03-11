@@ -14,14 +14,14 @@ export const ConfirmItemPassword: React.FC = () => {
       rules={[
         {
           required: true,
-          message: t('profile.nav.securitySettings.requiredPassword'),
+          message: t('profile.nav.securitySettings.requiredPassword') || '',
         },
         ({ getFieldValue }) => ({
           validator(_, value) {
             if (!value || getFieldValue('newPassword') === value) {
               return Promise.resolve();
             }
-            return Promise.reject(new Error(t('profile.nav.securitySettings.dontMatchPassword')));
+            return Promise.reject(new Error(t('profile.nav.securitySettings.dontMatchPassword') || ''));
           },
         }),
       ]}

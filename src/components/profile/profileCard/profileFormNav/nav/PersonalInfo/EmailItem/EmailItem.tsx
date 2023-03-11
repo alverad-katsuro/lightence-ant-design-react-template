@@ -16,13 +16,13 @@ export const EmailItem: React.FC<EmailItemProps> = ({ required, onClick, verifie
     <BaseButtonsForm.Item
       name="email"
       $isSuccess={verified}
-      $successText={t('profile.nav.personalInfo.verified')}
+      $successText={t('profile.nav.personalInfo.verified')!}
       label={t('common.email')}
       rules={[
-        { required, message: t('common.requiredField') },
+        { required, message: t('common.requiredField')! },
         {
           type: 'email',
-          message: t('common.notValidEmail'),
+          message: t('common.notValidEmail')!,
         },
       ]}
       {...props}

@@ -14,7 +14,7 @@ export const ExpDateItem: React.FC<CardInputProps> = ({ disabled, handleInputFoc
       rules={[
         {
           required: true,
-          message: t('common.requiredField'),
+          message: t('common.requiredField') || '',
         },
       ]}
     >

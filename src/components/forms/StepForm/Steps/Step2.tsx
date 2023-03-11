@@ -29,7 +29,7 @@ export const Step2: React.FC = () => {
       <BaseForm.Item
         name="salutation"
         label={t('forms.stepFormLabels.salutation')}
-        rules={[{ required: true, message: t('forms.stepFormLabels.salutationError') }]}
+        rules={[{ required: true, message: t('forms.stepFormLabels.salutationError') || '' }]}
       >
         <RadioGroup>
           <RadioButton value="mr">{t('forms.stepFormLabels.mr')}</RadioButton>
@@ -39,7 +39,7 @@ export const Step2: React.FC = () => {
       <BaseForm.Item
         name="gender"
         label={t('forms.stepFormLabels.gender')}
-        rules={[{ required: true, message: t('common.requiredField') }]}
+        rules={[{ required: true, message: t('common.requiredField') || '' }]}
       >
         <Select placeholder={t('forms.stepFormLabels.gender')}>
           <Option value="male">{t('forms.stepFormLabels.male')}</Option>
@@ -49,28 +49,28 @@ export const Step2: React.FC = () => {
       <BaseForm.Item
         name="firstName"
         label={t('common.firstName')}
-        rules={[{ required: true, message: t('forms.stepFormLabels.firstNameError') }]}
+        rules={[{ required: true, message: t('forms.stepFormLabels.firstNameError') || '' }]}
       >
         <Input />
       </BaseForm.Item>
       <BaseForm.Item
         name="lastName"
         label={t('common.lastName')}
-        rules={[{ required: true, message: t('forms.stepFormLabels.lastNameError') }]}
+        rules={[{ required: true, message: t('forms.stepFormLabels.lastNameError') || '' }]}
       >
         <Input />
       </BaseForm.Item>
       <BaseForm.Item
         name="birthday"
         label={t('forms.stepFormLabels.birthday')}
-        rules={[{ required: true, message: t('forms.stepFormLabels.birthdayError') }]}
+        rules={[{ required: true, message: t('forms.stepFormLabels.birthdayError') || '' }]}
       >
         <Picker format="YYYY-MM-DD" />
       </BaseForm.Item>
       <S.PhoneItem
         name="phone"
         label={t('common.phone')}
-        rules={[{ required: true, message: t('forms.stepFormLabels.phoneError') }]}
+        rules={[{ required: true, message: t('forms.stepFormLabels.phoneError') || '' }]}
       >
         <Input addonBefore={prefixSelector} />
       </S.PhoneItem>
@@ -80,7 +80,7 @@ export const Step2: React.FC = () => {
         rules={[
           {
             type: 'email',
-            message: t('common.notValidEmail'),
+            message: t('common.notValidEmail') || '',
           },
         ]}
       >

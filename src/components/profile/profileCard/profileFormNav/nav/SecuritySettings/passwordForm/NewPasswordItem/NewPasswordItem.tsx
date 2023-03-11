@@ -15,18 +15,18 @@ export const NewPasswordItem: React.FC = () => {
       rules={[
         {
           required: true,
-          message: t('profile.nav.securitySettings.requiredPassword'),
+          message: t('profile.nav.securitySettings.requiredPassword') || '',
         },
         {
           pattern: passwordPattern,
-          message: t('profile.nav.securitySettings.notValidPassword'),
+          message: t('profile.nav.securitySettings.notValidPassword') || '',
         },
         ({ getFieldValue }) => ({
           validator(_, value) {
             if (!value || getFieldValue('password') !== value) {
               return Promise.resolve();
             }
-            return Promise.reject(new Error(t('profile.nav.securitySettings.samePassword')));
+            return Promise.reject(new Error(t('profile.nav.securitySettings.samePassword') || ''));
           },
         }),
       ]}
